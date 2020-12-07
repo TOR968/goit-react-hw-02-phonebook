@@ -43,7 +43,7 @@ class App extends Component {
       toast.configure();
       toast.error(`${newName} is already in contact list`, {
         position: toast.POSITION.TOP_CENTER,
-        autoClose: 8000,
+        autoClose: 4000,
         delay: 200,
         transition: Zoom,
       });
