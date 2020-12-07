@@ -1,16 +1,16 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import styles from "./ContactForm.module.css";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import styles from './ContactForm.module.css';
 
-import { v4 as uuidv4 } from "uuid";
+import uuid from 'react-uuid';
 
 class ContactForm extends Component {
   state = {
-    name: "",
-    number: "",
+    name: '',
+    number: '',
   };
 
-  changeHandler = (e) => {
+  changeHandler = e => {
     const { name, value } = e.target;
 
     this.setState({
@@ -18,11 +18,11 @@ class ContactForm extends Component {
     });
   };
 
-  submitHandler = (e) => {
+  submitHandler = e => {
     e.preventDefault();
     const { name, number } = this.state;
     const contact = {
-      id: uuidv4(),
+      id: uuid(),
       name: name,
       number: number,
     };
@@ -33,8 +33,8 @@ class ContactForm extends Component {
 
   reset = () => {
     this.setState({
-      name: "",
-      number: "",
+      name: '',
+      number: '',
     });
   };
 
