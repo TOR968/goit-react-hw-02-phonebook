@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import styles from './ContactListItem.module.css';
 
-const ContactListItem = ({ name, number, onDelete }) => {
+function ContactListItem({ name, number, onDelete }) {
   return (
     <li className={styles.contactLi}>
       <p className={styles.contactLiP}>
@@ -12,7 +12,7 @@ const ContactListItem = ({ name, number, onDelete }) => {
       </button>
     </li>
   );
-};
+}
 
 ContactListItem.propTypes = {
   name: PropTypes.string.isRequired,
