@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import ContactListItem from './ContactListItem/ContactListItem';
 
-const ContactList = ({ contacts, onDelete }) => {
+function ContactList({ contacts, onDelete }) {
   return (
     <ul>
-      {contacts.length ? (
+      {contacts ? (
         contacts.map(({ id, name, number }) => (
           <ContactListItem
             key={id}
@@ -18,7 +18,7 @@ const ContactList = ({ contacts, onDelete }) => {
       )}
     </ul>
   );
-};
+}
 
 ContactList.propTypes = {
   contacts: PropTypes.oneOfType([
