@@ -4,7 +4,7 @@ const style = {
   display: 'block',
 };
 
-const Filter = ({ onChange }) => {
+function Filter({ onChange }) {
   return (
     <label htmlFor="filterInput">
       Find contacts by name
@@ -17,7 +17,7 @@ const Filter = ({ onChange }) => {
       />
     </label>
   );
-};
+}
 
 Filter.propTypes = {
   onChange: PropTypes.func.isRequired,
